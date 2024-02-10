@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    
+}
+
+html {
+    background-color: #f0e5e1;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 0 20px 0 20px;
+}
+
+.nav-title {
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+
+.nav-title:hover {
+    color:#101d56;
+}
+
+.nav-right-content a {
+    position: relative;
+    color: #000;
+    text-decoration: none;
+}
+  
+.nav-right-content a:hover {
+    color: #000;
+}
+
+.nav-right-content a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-right-content a:hover::before {
+    transform: scaleX(1);
+}
+
+.about-me-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 60%;
+}
+
+.myself-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.vertical-hr {
+    background-color: #000;
+    width: 100%;
+    height: 1px;
+    margin: 10px 0 10px 0;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+}
+
+.presentation-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 50px);
+    margin-bottom: 50px;
+}
+
+.languages-container i {
+    font-size: 40px;
+    margin: 0 10px 0 10px;
+    color: #000;
+}
+
+.languages-container i:hover {
+    color: #101d56;
+}
+
+.scroll {
+    position: absolute;
+    bottom: 20px;
+}
+
+@media (min-width: 800px) {
+
+    .about-me-container {
+        width: 754px;
+    }
+}
+
+@media (min-width: 650px) {
+
+    .myself-container {
+        flex-direction: row;
+    }
+
+    .vertical-hr {
+        width: 2px;
+        height: 100%;
+        margin: 0 10px 0 10px;
+    }
+}
