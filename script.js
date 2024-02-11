@@ -1,12 +1,22 @@
-let inactiveBtn = document.getElementById("inactive");
-let activeBtn = document.getElementById("active");
+const personnalBtn = document.querySelector('#personnal-btn');
+const universitaryBtn = document.querySelector('#universitary-btn');
+const personnalProjects = document.querySelector('.personnal-projects-container');
+const universitaryProjects = document.querySelector('.universitary-projects-container');
 
-inactiveBtn.addEventListener('click', () => {
-    activeBtn.id = 'inactive';
-    inactiveBtn.id = 'active';
+universitaryBtn.addEventListener('click', () => {
+    if(universitaryBtn.classList.contains('toggle-active') === false){
+        personnalBtn.classList.toggle('toggle-active')
+        universitaryBtn.classList.toggle('toggle-active')
+        universitaryProjects.classList.toggle('toggle-active')
+        personnalProjects.classList.toggle('toggle-active')
+    }
+})
 
-    inactiveBtn = document.getElementById("inactive");
-    activeBtn = document.getElementById("active");
-});
-
-
+personnalBtn.addEventListener('click', () => {
+    if(personnalBtn.classList.contains('toggle-active') === false){
+        universitaryBtn.classList.toggle('toggle-active')
+        personnalBtn.classList.toggle('toggle-active')
+        universitaryProjects.classList.toggle('toggle-active')
+        personnalProjects.classList.toggle('toggle-active')
+    }
+})
