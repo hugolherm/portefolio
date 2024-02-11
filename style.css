@@ -129,9 +129,64 @@ body {
     cursor: pointer;
 }
 
-#active.project-btn  {
+.toggle-active.project-btn  {
     text-decoration: underline 4px;
 }
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+    background-color: #101d56;
+    width: 100%;
+    height: 200px;
+}
+
+.fa-heart:hover {
+    color: red;
+}
+
+.projects_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%
+}
+
+.projects-btn-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.personnal-projects-container {
+    display: none;
+}
+
+.personnal-projects-container.toggle-active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    width: 100%;
+}
+
+.universitary-projects-container {
+    display: none;
+}
+
+.universitary-projects-container.toggle-active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    width: 100%;
+}
+
+
 
 @media (min-width: 800px) {
 
