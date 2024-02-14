@@ -18,6 +18,10 @@ body {
     align-items: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -107,13 +111,15 @@ body {
     margin-bottom: 50px;
 }
 
-.languages-container i {
+.languages-container i,
+.project-icons i {
     font-size: 40px;
     margin: 0 10px 0 10px;
     color: #000;
 }
 
-.languages-container i:hover {
+.languages-container i:hover,
+.project-icons i:hover {
     color: #101d56;
 }
 
@@ -126,7 +132,7 @@ body {
 
 .project-btn {
     font-size: 25px;
-    background-color: #f0e5e1;
+    background-color: #e1d6d6;
     border-style: none;
     cursor: pointer;
 }
@@ -139,8 +145,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60%;
-    gap: 35px;
+    width: 100%;
+    gap: 45px;
+    padding: 40px 0 20px 0;
+    background-color: #e1d6d6;
+    margin-bottom: 40px;
 }
 
 .projects-btn-container {
@@ -158,8 +167,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 25px;
     min-height: 500px;
-    width: 100%;
+    width: 754px;
 }
 
 .universitary-projects-container {
@@ -171,9 +181,48 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 25px;
     min-height: 500px;
+    width: 754px;
+}
+
+.universitary-projects-container :nth-child(2n){
+    flex-direction: row-reverse;
+}
+
+.personnal-projects-container :nth-child(2n){
+    flex-direction: row-reverse;
+}
+
+.project-img-box {
+    width: 430px;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 9px 5px 14px 1px rgba(0,0,0, 0.1);
+}
+
+.my-project-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
     width: 100%;
 }
+
+.project-description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 30;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 
 footer {
     display: flex;
